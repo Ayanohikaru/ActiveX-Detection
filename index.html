@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAB ActiveX Self-Test Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="assets/logo.svg" alt="NAB Logo" height="40">
+            </div>
+            <h1>NAB ActiveX Self-Test Portal</h1>
+            <div class="subtitle">Internal Use Only</div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="intro">
+                <p>Use this tool to check whether your macro-enabled files may contain ActiveX components.
+                   Your files are scanned locally; no data leaves your computer.</p>
+            </div>
+
+            <div class="upload-zone" id="dropZone" 
+                 aria-label="File upload area. Drag and drop files here or click to select files.">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <p>Drag & Drop or Choose File</p>
+                <input type="file" id="fileInput" multiple 
+                       accept=".xlsm,.docm,.xlsb,.vbs,.js,.hta,.txt"
+                       aria-label="File input">
+                <button id="scanButton" class="primary-button" disabled>
+                    Scan Now
+                </button>
+            </div>
+
+            <div id="results" class="results" aria-live="polite">
+                <!-- Results will be inserted here -->
+            </div>
+
+            <div id="spinner" class="spinner hidden">
+                <i class="fas fa-circle-notch fa-spin"></i>
+                <span>Scanning...</span>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p class="disclaimer">For NAB internal use only. Files are processed locally in your browser.</p>
+            <nav>
+                <a href="#" class="footer-link">Help Guide</a> |
+                <a href="#" class="footer-link">Data Handling</a> |
+                <a href="#" class="footer-link">Contact Workplace Tech</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
